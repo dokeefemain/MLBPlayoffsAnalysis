@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+#this is all done on pitching data
 
 df = pd.read_csv("LargeTest.csv")
 #just a list of column names that we will use for feature selection didn't include stats like Wins and Loss because that is a result of the other stats
