@@ -3,6 +3,8 @@ import pandas as pd
 #this is used for setting up each csv for us to be able to use it properly
 data = pd.read_csv("C:/python/baseball/in/2014Pitching.csv")
 #create an array of the teams who made playoffs
+#just change the year in this link to get the season
+#https://www.baseball-reference.com/leagues/MLB/2012.shtml
 #name has to correspond to how the name was written in the csv
 #2019 ["MIL","WSN","TBR","OAK","STL","LAD","MIN","NYY","ATL","HOU"]
 #2018 ["BOS","LAD","MIL","HOU","NYY","CLE","COL","OAK","ATL","CHC"]
@@ -10,6 +12,8 @@ data = pd.read_csv("C:/python/baseball/in/2014Pitching.csv")
 #2016 ["LAD","WSN","CHC","SFG","CLE","TEX","TOR","TEX","BAL","NYM"]
 #2015 ["NYM","LAD","CHC","STL","TOR","TEX","KCR","HOU","NYY","PIT"]
 #2014 ["STL","LAD","SFG","WSN","BAL","DET","KCR","LAA","OAK","PIT"]
+#2013 ["LAD","ATL","STL","PIT","DET","OAK","BOS","TBR","CLE","CIN"]
+#2012 ["SFG","CIN","STL","WSN","OAK","DET","NYY","BAL","TEX","ATL"]
 teams = ["STL","LAD","SFG","WSN","BAL","DET","KCR","LAA","OAK","PIT"]
 data["post"] = 0
 for index, rows in data.iterrows():
