@@ -14,7 +14,8 @@ data = pd.read_csv("C:/python/baseball/in/2014Pitching.csv")
 #2014 ["STL","LAD","SFG","WSN","BAL","DET","KCR","LAA","OAK","PIT"]
 #2013 ["LAD","ATL","STL","PIT","DET","OAK","BOS","TBR","CLE","CIN"]
 #2012 ["SFG","CIN","STL","WSN","OAK","DET","NYY","BAL","TEX","ATL"]
-teams = ["STL","LAD","SFG","WSN","BAL","DET","KCR","LAA","OAK","PIT"]
+
+teams = []
 data["post"] = 0
 for index, rows in data.iterrows():
     name = data.at[index,'Tm']
