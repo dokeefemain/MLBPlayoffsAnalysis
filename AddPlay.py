@@ -14,7 +14,9 @@ data = pd.read_csv("C:/python/baseball/in/2014Pitching.csv")
 #2014 ["STL","LAD","SFG","WSN","BAL","DET","KCR","LAA","OAK","PIT"]
 #2013 ["LAD","ATL","STL","PIT","DET","OAK","BOS","TBR","CLE","CIN"]
 #2012 ["SFG","CIN","STL","WSN","OAK","DET","NYY","BAL","TEX","ATL"]
-
+#2011 = ["MIL","ARI","STL","PHI","TEX","TBR","DET","NYY"]
+#2010 = ["SFG","ATL","PHI","CIN","NYY","MIN","TEX","TBR"]
+#2009 = ["PHI","COL","LAD","STL","LAA","BOS","NYY","MIN"]
 teams = []
 data["post"] = 0
 for index, rows in data.iterrows():
