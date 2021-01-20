@@ -12,7 +12,6 @@ cols = list(dict.fromkeys(cols))
 for i in cols:
     df[i] = df[i]/df[i].max()
 
-#1
 
 #logistic regression and Recursive Feature Elemination
 from sklearn.linear_model import LogisticRegression
@@ -52,7 +51,23 @@ for i in bad_features:
 X = df[selected_features]
 y = df['post']
 
-#2
+#Sigmoid functions
+X_tmp = df["ERA"].values.reshape(-1,1)
+Y_tmp = df["post"].values.reshape(-1,1)
+
+sns.regplot(x=X_tmp, y=Y_tmp, color='g', logistic=True)
+plt.xlabel("ERA")
+plt.ylabel("Post")
+plt.show()
+
+X_tmp = df["RBI"].values.reshape(-1,1)
+Y_tmp = df["post"].values.reshape(-1,1)
+
+sns.regplot(x=X_tmp, y=Y_tmp, color='g', logistic=True)
+plt.xlabel("RBI")
+plt.ylabel("Post")
+plt.show()
+
 
 from sklearn.model_selection import train_test_split
 
@@ -74,9 +89,10 @@ print("Confusion matrix:",cnf_matrix)
 
 print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 #0.927
-#Really high accuracy which shows the model is working
+#Really high accuracy which shows the predicted values are extremely close to the actual values
 print("Precision:",metrics.precision_score(y_test, y_pred))
 #0.95
+#High percision meaning there is very little variation in the values predicted
 print("Recall:",metrics.recall_score(y_test, y_pred))
 #0.7916666666666666
 #Single test case Washington Nationals 2019
